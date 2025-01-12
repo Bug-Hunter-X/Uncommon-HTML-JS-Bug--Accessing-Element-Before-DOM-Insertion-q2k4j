@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrectly accessing the element before it's added to the DOM
+    console.log(document.getElementById('myDiv').innerHTML); 
+    // Adding element to DOM AFTER accessing it
+    document.getElementById('myDiv').innerHTML += "<p>Added text</p>";
+  </script>
+</body>
+</html>
